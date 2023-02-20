@@ -14,12 +14,12 @@ addTask.addEventListener("click", () => {
 
     let checkBtn = document.createElement('button')
     checkBtn.innerHTML = `<i class="fa-solid fa-check"></i>`
-    checkBtn.classList.add('checkTask')
+    checkBtn.classList.add('btn', 'checkTask')
     task.appendChild(checkBtn)
 
     let deleteBtn = document.createElement('button')
     deleteBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`
-    deleteBtn.classList.add('deleteTask')
+    deleteBtn.classList.add('btn', 'deleteTask')
     task.appendChild(deleteBtn)
 
     if (inputTask.value === "") {
@@ -36,14 +36,14 @@ addTask.addEventListener("click", () => {
         if (checkUncheck === "unchecked") {
             checkBtn.parentElement.style.textDecoration = "line-through"
             checkBtn.parentElement.style.color = "darkgray"
-            checkBtn.style.backgroundColor = "rgb(0, 149, 255)"
-            checkBtn.style.color = "whitesmoke"
+            checkBtn.classList.remove('checkTask')
+            checkBtn.classList.add('uncheckTask')
             checkUncheck = "checked"
         } else {
             checkBtn.parentElement.style.textDecoration = "none"
             checkBtn.parentElement.style.color = "black"
-            checkBtn.style.backgroundColor = "whitesmoke"
-            checkBtn.style.color = "rgb(0, 149, 255)"
+            checkBtn.classList.remove('uncheckTask')
+            checkBtn.classList.add('checkTask')
             checkUncheck = "unchecked"
         }
     })

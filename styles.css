@@ -65,7 +65,7 @@ body {
     margin-left: 5px;
 }
 
-.task button {
+.task .btn {
     flex: .35;
     font-size: 14px;
     border-radius: 9999em;
@@ -74,22 +74,34 @@ body {
     background-color: white;
 }
 
-.checkTask {
+.btn.checkTask {
     border: solid 2px rgb(0, 149, 255);
     color: rgb(0, 149, 255);
 }
 
-.deleteTask {
+.btn.deleteTask {
     border: solid 2px rgb(255, 0, 0);
     color: rgb(255, 0, 0);
 }
 
-.checkTask:hover{
+.btn.checkTask:hover{
     background-color: rgb(0, 149, 255);
     color: whitesmoke;
 }
 
-.deleteTask:hover {
+.btn.deleteTask:hover {
     background-color: rgb(255, 0, 0);
     color: whitesmoke;
+}
+
+.btn.uncheckTask {
+    border: solid 2px rgb(0, 149, 255);
+    background-color: rgb(0, 149, 255);
+    color: whitesmoke;
+}
+
+.btn.uncheckTask:hover {
+    border: solid 2px rgb(0, 149, 255);
+    background-color: transparent;
+    color: rgb(0, 149, 255);
 }
