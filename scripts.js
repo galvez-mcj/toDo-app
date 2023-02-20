@@ -30,23 +30,25 @@ addTask.addEventListener("click", () => {
 
     inputTask.value = ""
 
+    console.log(task)
+
     checkBtn.addEventListener("click", () => {
         if (checkUncheck === "unchecked") {
             checkBtn.parentElement.style.textDecoration = "line-through"
+            checkBtn.parentElement.style.color = "darkgray"
             checkBtn.style.backgroundColor = "rgb(0, 149, 255)"
             checkBtn.style.color = "whitesmoke"
             checkUncheck = "checked"
         } else {
             checkBtn.parentElement.style.textDecoration = "none"
+            checkBtn.parentElement.style.color = "black"
             checkBtn.style.backgroundColor = "whitesmoke"
             checkBtn.style.color = "rgb(0, 149, 255)"
             checkUncheck = "unchecked"
         }
-        
     })
 
-    deleteBtn.addEventListener("click", (e) => {
-        let target = e.target
-        target.parentElement.parentElement.remove()
+    deleteBtn.addEventListener("click", () => {
+        task.remove()
     })
 })
